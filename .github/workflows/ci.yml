@@ -40,7 +40,7 @@ jobs:
         with:
           status: ${{ job.status }}
           fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
-          text: 'Continuous Integration for Microservice UserManagement ongoing'
+          text: 'Continuous Integration for xMicroservice UserManagement ongoing'
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: Checkout Repository
