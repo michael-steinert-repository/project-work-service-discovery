@@ -39,6 +39,9 @@ jobs:
           username: ${{ env.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
+      - name: Grant Execute Permission for mvnw
+        run: chmod +x ./mvnw
+
       - name: Maven Clean Package and Push to Dockerhub
         run: ./mvnw clean package -P build-and-push-container-to-dockerhub
 
